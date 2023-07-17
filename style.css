@@ -1,0 +1,146 @@
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(-45deg, #F29E4C, #EF3054, #048BA8, #16DB93, #EFEA5A);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+#header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    font-weight: bolder;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    padding-top: 10px;
+}
+
+#game {
+    display: flex;
+    gap: 100px;
+}
+
+#grid {
+	outline: 3px solid black;
+	font-size: 0;
+	height: 500px;
+	width: 500px;
+    background-color: white;
+}
+
+.block {
+	display: inline-block;
+}
+
+#options {
+    display: flex;
+    gap: 25px;
+}
+
+button {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    transition: transform 1ms;
+}
+
+button:active {
+    transform: scale(.95)
+}
+
+button:hover {
+    border: none;
+}
+
+#rainbow {
+    background: linear-gradient(45deg, red, orange, yellow, lightgreen, lightblue, indigo, violet);
+    animation: gradient 5s ease infinite;
+    background-size: 400% 400%;
+}
+
+#colorPickerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transform: none;
+    width: 180px;
+    height: 40px;
+}
+
+#sliderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    padding-top: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#slider {
+    -webkit-appearance: none;
+    width: 100px;
+    height: 10px;
+    background: transparent;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+  
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#slider::-webkit-slider-thumb:hover {
+    background-color: white;
+    transition: transform 1ms;
+    transform: scale(1.5);
+}
+
+#slider:hover {
+    transition: transform 1ms;
+    border: 2px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: -25px;
+}
